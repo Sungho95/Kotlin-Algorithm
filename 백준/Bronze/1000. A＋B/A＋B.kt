@@ -1,5 +1,4 @@
-import java.util.Scanner
-
-fun main() = with(Scanner(System.`in`)) {
-    println(nextInt() + nextInt())
+fun main() {
+    val input = readLine()
+    println(input!!.split(" ")[0].toInt() + input!!.split(" ")[1].toInt())
 }
