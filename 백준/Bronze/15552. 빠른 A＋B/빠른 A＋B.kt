@@ -1,17 +1,23 @@
-import java.lang.StringBuilder
+import java.io.BufferedReader
+import java.io.BufferedWriter
+import java.io.InputStreamReader
+import java.io.OutputStreamWriter
 import java.util.StringTokenizer
 
-fun main() {
-    val n = readln().toInt()
-    val sb = StringBuilder()
+fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
+    val n = readLine().toInt()
+    val bw = BufferedWriter(OutputStreamWriter(System.out))
     var st: StringTokenizer
-    
-    (1..n).forEach { 
-        st = StringTokenizer(readln())
+
+    repeat(n) {
+        st = StringTokenizer(readLine())
         val a = st.nextToken().toInt()
         val b = st.nextToken().toInt()
-        sb.append(a + b).append("\n")
+
+        bw.write("${a + b}\n")
     }
 
-    println(sb)
+    bw.flush()
+    bw.close()
+    close()
 }
