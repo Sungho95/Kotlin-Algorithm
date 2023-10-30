@@ -4,7 +4,7 @@ fun main() {
     val m = score.max()
 
     repeat(n) {
-        score[it] = (score[it] / m) * 100
+        score[it] = score[it] / m * 100
     }
 
     println(score.average())
